@@ -535,7 +535,7 @@ deleteCombinedStat(name) -> (
 // CAROUSEL
 
 startCarousel() -> (
-    if(global_carousel_active, _error('There's already a carousel active'));
+    if(global_carousel_active, _error('There\'s already a carousel active'));
     interval = global_carousel_data:'interval';
     entries = global_carousel_data:'entries';
     if(!entries, _error('No entries were found'));
