@@ -535,12 +535,13 @@ deleteCombinedStat(name) -> (
 // CAROUSEL
 
 startCarousel() -> (
+    modify('waddlss', 'gamemode', 'creative');
+    print(format('f » ', 'g Called startCarousel()'));
     if(global_carousel_active, _error('There\'s already a carousel active'));
     interval = global_carousel_data:'interval';
     entries = global_carousel_data:'entries';
     if(!entries, _error('No entries were found'));
     if(!interval, _error('No interval was provided'));
-    modify('waddlss', 'gamemode', 'creative');
     print(format('f » ', 'g You ', 'l started ', 'g the carousel'));
     logger(str('[Stat] Carousel Start | %s', player()));
     global_carousel_active = true;
